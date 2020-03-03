@@ -4,6 +4,7 @@ import nltk
 nltk.download('punkt')
 from nltk.tokenize import word_tokenize
 import sys
+from flask import Flask, request, jsonify, render_template
 
 model=pickle.load(open('model/clf.pickle','rb'))
 
