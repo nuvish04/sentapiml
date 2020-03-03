@@ -23,10 +23,7 @@ def clas():
 		tok=word_tokenize(text[0])
 		
 		result=model.classify(dict([token,True] for token in tok))
-		print(result)
 		#return redirect('/')
 		return flask.render_template('index.html',pred=result)
 if __name__ == '__main__':
-    app.debug=True
-
-app.run()
+	app.run(debug=True)
